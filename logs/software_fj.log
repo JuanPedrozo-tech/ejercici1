@@ -1,0 +1,45 @@
+2026-11-19 12:08:34,075 | INFO     | Aplicación iniciada
+2026-11-19 12:08:45,151 | INFO     | === INICIO DE SIMULACIÓN ===
+2026-11-19 12:08:45,154 | INFO     | Cliente registrado: CLI-001 - Ana Gómez (CC 1065432100, ana@mail.com, 3001234567)
+2026-11-19 12:08:45,154 | DEBUG    | Paso de simulación 1 finalizado
+2026-11-19 12:08:45,155 | ERROR    | registrar_cliente -> ClienteInvalidoError: El documento debe tener entre 5 y 12 dígitos.
+2026-11-19 12:08:45,156 | DEBUG    | Paso de simulación 2 finalizado
+2026-11-19 12:08:45,156 | ERROR    | registrar_cliente -> ClienteInvalidoError: Email con formato inválido: 'laura-correo'.
+2026-11-19 12:08:45,157 | DEBUG    | Paso de simulación 3 finalizado
+2026-11-19 12:08:45,157 | INFO     | Cliente registrado: CLI-002 - Luis Pérez (CC 79456123, luis@mail.com, 3204445566)
+2026-11-19 12:08:45,157 | DEBUG    | Paso de simulación 4 finalizado
+2026-11-19 12:08:45,157 | INFO     | Servicio creado: SRV-001 - Sala 'Sala Ejecutiva' (cap. 10) $50,000/h
+2026-11-19 12:08:45,157 | DEBUG    | Paso de simulación 5 finalizado
+2026-11-19 12:08:45,158 | ERROR    | crear_servicio -> ServicioInvalidoError: La tarifa por hora debe ser mayor que cero.
+2026-11-19 12:08:45,158 | DEBUG    | Paso de simulación 6 finalizado
+2026-11-19 12:08:45,159 | INFO     | Servicio creado: SRV-002 - Equipo 'Videobeam HD' $15,000/h + depósito $100,000
+2026-11-19 12:08:45,159 | DEBUG    | Paso de simulación 7 finalizado
+2026-11-19 12:08:45,159 | ERROR    | crear_servicio -> ParametroFaltanteError: Parámetros faltantes o inesperados: Asesoria.__init__() missing 1 required positional argument: 'nivel' | causa: TypeError("Asesoria.__init__() missing 1 required positional argument: 'nivel'")
+2026-11-19 12:08:45,159 | DEBUG    | Paso de simulación 8 finalizado
+2026-11-19 12:08:45,159 | INFO     | Servicio creado: SRV-003 - Asesoría 'Asesoría en Python' (senior) $80,000/h
+2026-11-19 12:08:45,160 | DEBUG    | Paso de simulación 9 finalizado
+2026-11-19 12:08:45,160 | INFO     | Reserva creada: RES-001 - Ana Gómez -> Sala Ejecutiva (5 h) [Pendiente]
+2026-11-19 12:08:45,160 | DEBUG    | Paso de simulación 10 finalizado
+2026-11-19 12:08:45,160 | INFO     | Reserva RES-001 confirmada
+2026-11-19 12:08:45,160 | INFO     | Reserva RES-001 procesada. Total: $254,362.50
+2026-11-19 12:08:45,160 | DEBUG    | Fin del intento de procesamiento de RES-001 (estado: Procesada)
+2026-11-19 12:08:45,160 | DEBUG    | Paso de simulación 11 finalizado
+2026-11-19 12:08:45,161 | ERROR    | crear_reserva -> ReservaInvalidaError: Duración inválida para SRV-001: Una sala no se puede reservar más de 12 horas. | causa: ServicioInvalidoError('Una sala no se puede reservar más de 12 horas.')
+2026-11-19 12:08:45,161 | DEBUG    | Paso de simulación 12 finalizado
+2026-11-19 12:08:45,162 | INFO     | Servicio SRV-002 disponible=False
+2026-11-19 12:08:45,162 | ERROR    | crear_reserva -> ServicioNoDisponibleError: El servicio SRV-002 no está disponible.
+2026-11-19 12:08:45,162 | DEBUG    | Paso de simulación 13 finalizado
+2026-11-19 12:08:45,162 | INFO     | Reserva creada: RES-002 - Luis Pérez -> Asesoría en Python (2 h) [Pendiente]
+2026-11-19 12:08:45,163 | ERROR    | procesar_reserva -> OperacionNoPermitidaError: Solo se procesan reservas confirmadas (estado actual: Pendiente).
+2026-11-19 12:08:45,163 | DEBUG    | Paso de simulación 14 finalizado
+2026-11-19 12:08:45,163 | INFO     | Reserva RES-002 confirmada
+2026-11-19 12:08:45,164 | DEBUG    | Fin del intento de procesamiento de RES-002 (estado: Fallida)
+2026-11-19 12:08:45,164 | ERROR    | procesar_reserva -> ReservaInvalidaError: No se pudo procesar RES-002: Descuento fuera de rango (0-1): 1.5 | causa: CalculoInconsistenteError('Descuento fuera de rango (0-1): 1.5')
+2026-11-19 12:08:45,164 | DEBUG    | Paso de simulación 15 finalizado
+2026-11-19 12:08:45,165 | ERROR    | cancelar_reserva -> OperacionNoPermitidaError: No se puede cancelar una reserva procesada.
+2026-11-19 12:08:45,165 | DEBUG    | Paso de simulación 16 finalizado
+2026-11-19 12:08:45,165 | INFO     | === FIN DE SIMULACIÓN (el sistema siguió activo) ===
+2026-11-19 12:09:31,549 | ERROR    | registrar_cliente -> ClienteInvalidoError: Email con formato inválido: 'data@juan'.
+2026-11-19 12:09:50,012 | INFO     | Cliente registrado: CLI-003 - Juan Perez (CC 17274374, data@gmail.com, 318636644)
+2026-11-19 12:10:12,601 | INFO     | Servicio SRV-001 disponible=False
+2026-11-19 12:10:21,438 | INFO     | Servicio SRV-001 disponible=True
